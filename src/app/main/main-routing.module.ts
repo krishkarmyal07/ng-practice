@@ -19,7 +19,12 @@ const routes: Routes = [
         component: DataBindingComponent
       }, 
       { 
-        path: 'view-encapsulation', loadChildren: () => import('./view-encapsulation/view-encapsulation.module').then(m => m.ViewEncapsulationModule)
+        path: 'view-encapsulation', 
+        loadChildren: () => import('./view-encapsulation/view-encapsulation.module').then(m => m.ViewEncapsulationModule)
+      },
+      
+      { path: '', 
+        loadChildren: () => import('./async/async.module').then(m => m.AsyncModule)
       }
     ]
   }

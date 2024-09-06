@@ -1,0 +1,19 @@
+.buttons div {
+height: 50px;
+width: 100px;
+background-color: rgb(4, 42, 29);
+text-align: center;
+padding-top: 20px;
+color: aliceblue;
+}
+
+.buttons{
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+    
+}
+
+.buttons div:hover {
+    background-color: rgb(56, 155, 120);
+}

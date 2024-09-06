@@ -1,0 +1,48 @@
+<div style="padding: 20px;">
+    <div style="text-align: center;">
+        <p>Promise are loaded as soons as they are created where as Observable are lazy in nature. i.e They will be called only when subscribed</p>
+         <small> click on created and check console.</small>
+    </div>
+    <div class="buttons">
+        <div (click)= "create()">Create</div>
+        <div (click)= "execute()">Execute</div>
+    </div>
+    <div style="padding: 20px; text-align: center;">
+    <small>In above example observable and promise are created when user clicks on Create.</small> <br>
+    <small>However in console only Promise is displayed</small> <br>
+    <small>When User clicks on executed Observable is subscribed and is displayed in the console. </small>
+    </div>
+</div>
+
+<hr>
+
+<div style="padding: 20px;">
+    <div style="text-align: center;">
+        <p>Observable emmits multiple value over a period of time while promise emits one value</p>
+
+        <div class="buttons">
+            <div (click)= "create1()">Create</div>
+            <div (click)= "execute1()">Execute</div>
+        </div>
+        <small>In above example all 3 observable values were logged where as single value from promise was logged</small>
+        <div style="display: flex; gap: 30px; justify-content: center;">
+        </div>
+    </div>
+</div>
+
+<hr>
+
+
+<div style="padding: 20px;">
+    <div style="text-align: center;">
+        <p>Observable can be cancelled</p>
+
+        <div class="buttons">
+            <div (click)= "create2()">Create</div>
+            <div (click)= "execute2()">Execute</div>
+            <div (click)="cancel()">Cancel</div>
+        </div>
+        <small>We are displaying timer for every second however it can be cancelled and timer will stop</small>
+        <div>{{time}}</div>
+    </div>
+</div>
