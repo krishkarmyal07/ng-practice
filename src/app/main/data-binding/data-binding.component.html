@@ -1,0 +1,76 @@
+<div class="main">
+    <div class="right">
+        <h3>String Interpolation</h3>
+        <div class="defination">
+            <p>
+                String Interpolation is a one-way databinding technique which is used to output the data from a TypeScript code to HTML template (view)
+            </p>
+        </div>
+        <div class="defination">
+            <p>Button remain disabled even when the value is set to false using string interpolation as the each value is considered as string.</p>
+            <button disabled = "{{isDisabled}}">Disabled</button>
+        </div>
+
+        <blockquote>
+            <pre>
+              <code>
+                &lt;button  disabled= "{{isDisabled}}"&gt; Disabled &lt;/button> 
+              </code>
+            </pre>
+        </blockquote>
+
+         <div class="defination">
+            <input type="text" name="comment" id="" #commentStr>
+            <button (click)="addComment(commentStr.value, '')">add comment</button>
+         </div>
+         <div class="defination">
+            <span *ngFor="let item of comments">
+                {{item}}
+            </span>
+         </div>
+         
+        <div class="defination">
+            In the above example if the user inputs  &lt; b> Text  &lt; /b>
+            <p>the text appears normal</p>
+         </div>
+    </div>
+
+
+    <div class="left">
+        <h3>Property Binding</h3>
+         <div class="defination">
+            <p>In Angular, property binding is a one-way data binding mechanism that allows you to set the properties of HTML elements or Angular directives dynamically.</p>
+         </div>
+        <div class="defination">
+            <p>Button is Enabled using property binding and works fine.</p>
+            <button [disabled] = "isDisabled">Disabled</button>
+           
+        </div>
+
+        <blockquote>
+            <pre>
+              <code>
+                &lt;button  [disabled] = "isDisabled"&gt; Disabled &lt;/button> 
+              </code>
+            </pre>
+          </blockquote>
+
+          <div class="defination">
+            <input type="text" name="comment" id="" #commentProp>
+            <button (click)="addComment(commentProp.value, 'prop')">add comment</button>
+         </div>
+         <div class="defination">
+            <span *ngFor="let comment of commentsProp">
+               <span [innerHtml]="comment"></span>
+            </span>
+         </div>
+
+         <div class="defination">
+            In the above example if the user inputs  &lt; b> Text  &lt; /b>
+            <p>the text appears in bold <b>text</b></p>
+            A user can manipulate the dom which is not ideal
+         </div>
+    </div>
+
+
+</div>

@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+	height: 100%;
+}
+
+body {
+	font-family: 'Segoe WPC', 'Segoe UI', sans-serif;
+	font-size: .9375rem;
+	// background-color: #1f1f1f;
+	min-height: 100%;
+	overflow-x: hidden;
+	margin: 0;
+
+}
+
+.global-header{
+    background-color: black;
+    color: white;
+}
+
+.common{
+    background-color: cadetblue;
+}
+
+.global-none{
+    background-color: rgb(37, 61, 12);
+}
