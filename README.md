@@ -4,8 +4,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 generate main component
 
+`ng generate module main --route main --module app.module
 `
-ng generate module main --route main --module app.module
-
- `
 
