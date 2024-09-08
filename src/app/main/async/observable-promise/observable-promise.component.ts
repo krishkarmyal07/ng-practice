@@ -15,9 +15,7 @@ export class ObservablePromiseComponent {
   subscription2: any;
   time: any;
 
-  constructor(){
-    
-  }
+  constructor(){}
 
   create() {
     this.observable = new Observable<string>( observer =>{

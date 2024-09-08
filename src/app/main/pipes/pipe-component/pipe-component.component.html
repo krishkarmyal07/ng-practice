@@ -1,0 +1,91 @@
+<div class="main">
+    <div class="content-box">
+        <b>Pipes: </b><p>Pipes are simple functions to use in template expressions to accept an input value and return a transformed value. Pipes are useful because you can use them throughout your application, while only declaring each pipe once.</p>
+    </div>
+    <div class="content">
+       <div class="content-box">
+        <h1>Pure Pipe</h1>
+        <hr>
+          
+        <div style="padding: 10px 20px">
+            <p>
+                A pure pipe is called only when Angular detects changes in the input reference. This means that a pure pipe will not re-run if only the content of an array or object changes; the pipe will re-run only if the array or object itself is replaced with a new instance.
+            </p>
+
+            <p>
+                <b>Example Use Cases:</b> Capitalizing text, formatting dates, converting numbers.
+              </p>
+            <div>
+                <input type="text" name="" id="" [(ngModel)]="purePipe">
+                <button (click)="insertElement()">Insert</button>
+            </div>
+    
+            <div style="display: flex; gap: 80px;">
+                
+                <div>
+                
+                    <h3>
+                         Fruits
+                    </h3>
+                    <div *ngFor="let item of pureList">
+                        {{item}}
+                    </div>
+                </div>
+               
+                <div>
+                
+                    <h3>
+                        Filter Fruits
+                    </h3>
+                    <div *ngFor="let item of pureList | filter: purePipe">
+                        {{item}}
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+       
+       </div>
+      <hr>
+       <div class="content-box">
+        <h1>Impure Pipe</h1>
+        <hr>
+        <div style="padding: 10px 20px">
+        <p>
+            An impure pipe is called on every change detection cycle, meaning it will re-run even if there is no change in the input reference (like when a property inside an array or object changes).
+        </p>
+         <p>
+           <b>Example Use Cases:</b>  Filtering a list of items, live data transformations where frequent updates occur.
+         </p>
+        <div>
+            <input type="text" name="" id="" [(ngModel)]="impurePipe">
+            <button (click)="insertimpureElement()">Insert</button>
+        </div>
+
+        <div style="display: flex; gap: 80px;">
+                
+            <div>
+            
+                <h3>
+                     Fruits
+                </h3>
+                <div *ngFor="let item of impureList ">
+                    {{item}}
+                </div>
+            </div>
+           
+            <div>
+            
+                <h3>
+                    Filter Fruits
+                </h3>
+                <div *ngFor="let item of impureList | impureFilter: impurePipe">
+                    {{item}}
+                </div>
+            </div>
+        </div>
+
+        </div>
+       </div>
+    </div>
+</div>

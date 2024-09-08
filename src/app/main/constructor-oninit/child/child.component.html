@@ -1,0 +1,43 @@
+<div style="display: flex; width: 100%; padding: 30px;">
+    <div style="width: 49%;"> 
+        <div style="align-items: center; display: flex; flex-direction: column; ">
+            <h3>constructor</h3>
+        <h1>
+            {{constValue}}
+        </h1>
+        <p>
+            Value from parent in constructor. <small>original value 50</small>
+        </p>
+        
+        
+        </div>
+        <hr>
+        <li>Injecting dependencies like services or components</li>
+        <li>Js/ts feature </li>
+        <li>Initializes the class and injects dependencies</li>
+        <li>Should not preform dom related operation as component view is not loaded</li>
+        <li>can access input properties but may not have their final value if they depend on data binding</li>
+        <hr>
+
+    </div>
+    <hr>
+    <div  style="width: 49%;">
+        <div style="align-items: center; display: flex; flex-direction: column; ">
+            <h3>ngOnInit</h3>
+        <h1>
+            {{initValue}}
+        </h1>
+        <p>
+            Value from parent in ngOnInit. <small>original value 50</small>
+        </p>
+        
+        </div>
+        <hr>
+        <li>Initialization logic after component is ready</li>
+        <li>Part of angular lifecycle hook</li>
+        <li>Initializing component logic, like data fetching</li>
+        <li>Safe to perform DOM related operations since component view is initialized</li>
+        <li>Safe to access and work with input properties as they have their final value</li>
+        <hr>
+    </div>
+</div>

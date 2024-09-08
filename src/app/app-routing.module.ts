@@ -8,6 +8,8 @@ const routes: Routes = [
     pathMatch: "full",
   },
   { path: '', loadChildren: () => import('./main/main.module').then(m => m.MainModule) },
+  { path: 'main/pipes', loadChildren: () => import('./main/pipes/pipes.module').then(m => m.PipesModule) },
+  { path: 'main/constructor-oninit', loadChildren: () => import('./main/constructor-oninit/constructor-oninit.module').then(m => m.ConstructorOninitModule) },
 ];
 
 @NgModule({

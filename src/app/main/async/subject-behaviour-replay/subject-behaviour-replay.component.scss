@@ -1,0 +1,31 @@
+.main{
+    padding: 20px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 30px;
+}
+.content{
+    width: 45%;
+    justify-content: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+.button-container{
+    height: 50px;
+    width: 80px;
+    background-color: #6d7a7a;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    color: antiquewhite;
+    margin-bottom: 10px;
+}
+.button-container:hover {
+   background-color: aquamarine;
+}

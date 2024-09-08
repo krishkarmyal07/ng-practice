@@ -1,0 +1,45 @@
+<div class="main">
+    <div class="container">
+        <div class="content">
+             <div class="button-container" (click)="emit()">
+                Emit
+             </div>
+        </div>
+        <div class="content">
+           <div class="button-container" (click)="subscribe()">
+            Subscribe
+           </div>
+        </div>
+   </div>
+   
+   <hr>
+
+   <div class="container">
+    <div class="content">
+         <div>
+            <h3>Subject</h3>
+            <ng-container *ngFor="let item of displaySubject">
+                <p> {{item }}</p>
+            </ng-container>
+         </div>
+    </div>
+    <hr>
+    <div class="content">
+        <div>
+            <h3>replaySubject</h3>
+            <ng-container *ngFor="let item of displayReplaySubject">
+                <p> {{item }}</p>
+            </ng-container>
+         </div>
+   </div>
+   <hr>
+   <div class="content">
+    <div>
+        <h3>BehaviourSubject</h3>
+    <ng-container *ngFor="let item of displayBehaviourSubject">
+        <p> {{item }}</p>
+    </ng-container>
+    </div>
+</div>
+</div>
+</div>

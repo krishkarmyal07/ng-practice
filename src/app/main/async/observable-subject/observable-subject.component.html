@@ -1,0 +1,92 @@
+<div class="main">
+    <div class="container">
+        <div class="content">
+             <div class="button-container" (click)="emit()">
+                Emit
+             </div>
+        </div>
+        <div class="content">
+           <div class="button-container" (click)="subscribe()">
+            Subscribe
+           </div>
+        </div>
+   </div>
+   
+   <hr>
+
+   <div class="container">
+    <div class="content">
+         <div>
+            <h3>Observable</h3>
+             
+            <div>
+               1. Observable cant be consumers.
+            </div>
+
+           
+
+            <div>
+               2. Observable are cold. They emit data only when there is a subscriber.
+                <ng-container *ngFor="let item of displayObservable">
+                <p> {{item }}</p>
+                </ng-container>
+               
+              
+            </div>
+
+            <div style="    display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;">
+                <div class="content">
+                    <div class="button-container" (click)="emitObservable()">
+                        Emit Observable
+                     </div>
+                </div>
+               <div>
+                3. Observable are <b>unicast</b>. Each subscribed observer owns independent execution of observable. <br>
+
+                {{displayObservable1}} |  {{displayObservable2}}
+               </div>
+            </div>
+         </div>
+    </div>
+    <hr>
+    <div class="content">
+        <div>
+           <h3>Subject</h3>
+           <div>
+          1.  Subject can be consumers and providers.
+           </div>
+           
+           <div>
+           <div>
+            2. Subjects are Hot. They emit data even if there is no subscriber.
+            <ng-container *ngFor="let item of displaySubject">
+                <p> {{item}}</p>
+            </ng-container>
+         
+           </div>
+
+           <div style="    display: flex;
+           flex-direction: column;
+           align-items: center;
+           width: 100%;">
+            <div class="content"> 
+                <div class="button-container" (click)="emitSubject()">
+                    Emit Subject
+                 </div>
+                </div>
+              <div>
+                3. Subjects are <b>multicasting</b>. Execution is shared among multiple subscriber. <br>
+                {{displaySubject1}} |  {{displaySubject2}}
+              
+              </div>
+           </div>
+        </div>
+        </div>
+   </div>
+
+   
+</div>
+</div>
